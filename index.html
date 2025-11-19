@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERENDI CAT - Full-Chain Traceability</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007AFF',
+                        secondary: '#34C759',
+                        neutral: '#F5F5F7',
+                        dark: '#1D1D1F',
+                        gray: '#86868B',
+                        lightGray: '#E5E5EA'
+                    },
+                    fontFamily: {
+                        sf: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .ios-shadow {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            .ios-card {
+                @apply bg-white rounded-2xl ios-shadow p-5 mb-4 transition-all duration-300 hover:shadow-lg;
+            }
+            .progress-step {
+                @apply flex flex-col items-center relative;
+            }
+            .progress-line {
+                @apply absolute top-6 left-1/2 w-full h-0.5 bg-lightGray -translate-x-1/2 z-0;
+            }
+        }
+    </style>
+</head>
+<body class="font-sf bg-neutral text-dark min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-white bg-opacity-90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 ios-shadow">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <button class="text-dark p-2 rounded-full hover:bg-neutral transition-colors">
+                <i class="fa fa-arrow-left text-xl"></i>
+            </button>
+            <h1 class="text-xl font-semibold">Product Traceability</h1>
+            <button class="text-primary p-2 rounded-full hover:bg-neutral transition-colors">
+                <i class="fa fa-share-alt text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-24 pb-20">
+        <!-- Product Info Card -->
+        <div class="ios-card">
+            <div class="flex items-start gap-4">
+                <div class="w-20 h-20 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <i class="fa fa-paw text-primary text-3xl"></i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-semibold text-lg">Premium Protein Cat Food</h2>
+                    <p class="text-gray text-sm mt-1">Batch Number: SC20250618001</p>
+                    <p class="text-gray text-sm">Production Date: Jun 18, 2025</p>
+                    <div class="mt-3 flex gap-2">
+                        <span class="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Human-Grade</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">15-Day Cycle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QR Code Section -->
+        <div class="ios-card">
+            <h3 class="font-semibold text-lg mb-4">Dual-QR Code Traceability</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Raw Meat Source QR Area -->
+                <div class="flex flex-col items-center p-3 bg-neutral rounded-xl">
+                    <div class="w-32 h-32 bg-white p-2 rounded-lg ios-shadow mb-2">
+                        <img src="https://cdk9raw.com.au/cdn/shop/files/CAT_DUCK_ESSENTIALS.jpg?v=1738639338&width=1540" alt="Raw Meat Source QR Code" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-center font-medium">Raw Meat Sources</p>
+                    <p class="text-xs text-gray text-center">Origin and quality details</p>
+                </div>
+                <!-- Meat Processing QR Area -->
+                <div class="flex flex-col items-center p-3 bg-neutral rounded-xl">
+                    <div class="w-32 h-32 bg-white p-2 rounded-lg ios-shadow mb-2">
+                        <img src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2021/10/JustCats-Fish-Chicken.jpg" alt="Meat Processing QR Code" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-center font-medium">Meat Processing</p>
+                    <p class="text-xs text-gray text-center">Safety handling information</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Traceability Progress -->
+        <div class="ios-card">
+            <h3 class="font-semibold text-lg mb-6">Full-Chain Traceability Journey</h3>
+            
+            <div class="relative">
+                <div class="progress-line"></div>
+                <div class="flex justify-between relative z-10">
+                    <!-- Step 1 -->
+                    <div class="progress-step w-1/5">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-semibold">1</div>
+                        <p class="text-xs text-center mt-2 font-medium">Raw Meat Sourcing</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="progress-step w-1/5">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-semibold">2</div>
+                        <p class="text-xs text-center mt-2 font-medium">Meat Inspection</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="progress-step w-1/5">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-semibold">3</div>
+                        <p class="text-xs text-center mt-2 font-medium">Processing</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="progress-step w-1/5">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-semibold">4</div>
+                        <p class="text-xs text-center mt-2 font-medium">Quality Control</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="progress-step w-1/5">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-semibold">5</div>
+                        <p class="text-xs text-center mt-2 font-medium">Delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Traceability Info -->
+        <div class="ios-card">
+            <h3 class="font-semibold text-lg mb-4">Detailed Traceability Reports</h3>
+            
+            <!-- Raw Material Info -->
+            <div class="mb-5">
+                <h4 class="font-medium text-base flex items-center gap-2">
+                    <i class="fa fa-cutlery text-secondary"></i>
+                    Raw Meat Source
+                </h4>
+                <div class="mt-2 bg-neutral rounded-lg p-3 text-sm">
+                    <p class="mb-1"><span class="text-gray">Supplier:</span> Premium Meat Co. Ltd.</p>
+                    <p class="mb-1"><span class="text-gray">Origin:</span> Grass-fed farms, Inner Mongolia</p>
+                    <p class="mb-1"><span class="text-gray">Certification:</span> Human-Grade Meat Certificate #NM20250412</p>
+                    <p><span class="text-gray">Inspection Date:</span> Jun 10, 2025</p>
+                </div>
+            </div>
+
+            <!-- Inspection Reports -->
+            <div class="mb-5">
+                <h4 class="font-medium text-base flex items-center gap-2">
+                    <i class="fa fa-check-square-o text-secondary"></i>
+                    Meat Safety Reports
+                </h4>
+                <div class="mt-2 grid grid-cols-2 gap-2">
+                    <button class="bg-neutral rounded-lg p-3 text-sm flex flex-col items-center justify-center hover:bg-lightGray/50 transition-colors">
+                        <i class="fa fa-file-text-o text-primary mb-1"></i>
+                        <span>Meat Safety Test</span>
+                    </button>
+                    <button class="bg-neutral rounded-lg p-3 text-sm flex flex-col items-center justify-center hover:bg-lightGray/50 transition-colors">
+                        <i class="fa fa-file-text-o text-primary mb-1"></i>
+                        <span>Protein Analysis</span>
+                    </button>
+                    <button class="bg-neutral rounded-lg p-3 text-sm flex flex-col items-center justify-center hover:bg-lightGray/50 transition-colors">
+                        <i class="fa fa-file-text-o text-primary mb-1"></i>
+                        <span>Microbiology Test</span>
+                    </button>
+                    <button class="bg-neutral rounded-lg p-3 text-sm flex flex-col items-center justify-center hover:bg-lightGray/50 transition-colors">
+                        <i class="fa fa-file-text-o text-primary mb-1"></i>
+                        <span>Final Meat Audit</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Production Video -->
+            <div>
+                <h4 class="font-medium text-base flex items-center gap-2">
+                    <i class="fa fa-play-circle-o text-secondary"></i>
+                    Meat Processing Video
+                </h4>
+                <div class="mt-2 relative rounded-lg overflow-hidden ios-shadow">
+                    <img src="https://www.vetstreet.com/wp-content/uploads/2023/05/shutterstock_1578807931-1.jpg" alt="Meat Processing Preview" class="w-full h-32 object-cover">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <button class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                            <i class="fa fa-play text-xl ml-0.5"></i>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-xs text-gray mt-2 text-center">Watch the 60-second meat processing video</p>
+            </div>
+        </div>
+
+        <!-- Social Impact -->
+        <div class="ios-card bg-primary/5">
+            <div class="flex items-start gap-3">
+                <i class="fa fa-heart text-primary text-xl mt-1"></i>
+                <div>
+                    <h3 class="font-semibold text-lg">Social Impact</h3>
+                    <p class="text-sm text-gray mt-1">1% of this purchase supports stray cat rescue initiatives. Track how your purchase makes a difference in the SERENDI CAT App.</p>
+                    <button class="mt-3 text-primary text-sm font-medium hover:underline">
+                        View Rescue Projects <i class="fa fa-arrow-right text-xs ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <footer class="fixed bottom-0 left-0 right-0 bg-white ios-shadow py-3">
+        <div class="container mx-auto px-6 flex justify-between">
+            <button class="flex flex-col items-center text-gray hover:text-primary transition-colors">
+                <i class="fa fa-home text-xl"></i>
+                <span class="text-xs mt-1">Home</span>
+            </button>
+            <button class="flex flex-col items-center text-primary">
+                <i class="fa fa-search text-xl"></i>
+                <span class="text-xs mt-1">Trace</span>
+            </button>
+            <button class="flex flex-col items-center text-gray hover:text-primary transition-colors">
+                <i class="fa fa-user text-xl"></i>
+                <span class="text-xs mt-1">Profile</span>
+            </button>
+            <button class="flex flex-col items-center text-gray hover:text-primary transition-colors">
+                <i class="fa fa-shopping-cart text-xl"></i>
+                <span class="text-xs mt-1">Shop</span>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        // Simulate report opening
+        document.querySelectorAll('.grid-cols-2 button').forEach(button => {
+            button.addEventListener('click', function() {
+                const reportName = this.querySelector('span').textContent;
+                alert(`Opening ${reportName}...\nThis would display the full meat safety report in the app.`);
+            });
+        });
+
+        // Simulate video playback
+        document.querySelector('.relative:has(.fa-play) button').addEventListener('click', function() {
+            alert('Playing Meat Processing Video\nThis would launch the video player showing the full meat handling process.');
+        });
+
+        // Social impact button
+        document.querySelector('.ios-card.bg-primary\\/5 button').addEventListener('click', function() {
+            alert('Rescue Projects\nViewing details of stray cat rescue initiatives supported by your purchase.');
+        });
+    </script>
+</body>
+</html>
